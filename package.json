@@ -6,24 +6,31 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
-    "preview": "vite preview"
+    "preview": "vite preview",
+    "lint": "eslint src",
+    "lint:fix": "npm run lint -- --fix"
   },
   "dependencies": {
     "qr-scanner": "^1.4.2",
     "vue": "^3.4.37"
   },
   "devDependencies": {
+    "@eslint/js": "^9.11.1",
     "@vitejs/plugin-vue": "^5.1.2",
+    "eslint": "^9.11.1",
+    "eslint-plugin-vue": "^9.28.0",
+    "globals": "^15.9.0",
     "vite": "^5.4.1"
   },
-  "description": "Find various digital critters within QR codes in the real world",
+  "description": "A hidden world of qritters surrounds you, waiting to be discovered. Each code you unlock brings you closer to completing your collection.",
   "main": "index.html",
   "repository": {
     "type": "git",
     "url": "git+ssh://git@github.com/seriouslysean/qritters.git"
   },
   "keywords": [
-    "qr-codes"
+    "qr-codes",
+    "critters"
   ],
   "author": "Sean Kennedy <sean@codeserious.com>",
   "license": "UNLICENSED",
