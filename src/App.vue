@@ -12,9 +12,9 @@ function toggleScanner(shouldScan) {
   isScanning.value = shouldScan ?? !isScanning.value;
 }
 
-function handleScan(data) {
+async function handleScan(data) {
   toggleScanner(false);
-  const qritter = mapQrToQritter(data);
+  const qritter = await mapQrToQritter(data);
   console.log('scanned:', qritter);
   scannedQritter.value = qritter;
 }

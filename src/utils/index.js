@@ -29,6 +29,13 @@ const QRITTER_VERSIONS = {
     },
 };
 
+// Utility function to convert a buffer to a hex string
+const bufferToHex = (buffer) => {
+    return Array.from(new Uint8Array(buffer))
+        .map(b => b.toString(16).padStart(2, '0'))
+        .join('');
+};
+
 // Combine all qritters into a single object
 export const QRITTERS = Object.values(QRITTER_VERSIONS).reduce((acc, version) => ({
     ...acc,
@@ -40,15 +47,20 @@ export const getQritterByKey = (key) => {
     return QRITTERS[key] || null;
 };
 
-// Generate a hash using btoa and version as a salt
-export const generateHash = (qrData) => {
+// Generate a hash using SHA-256 and version as a salt
+export const generateHash = async (qrData) => {
     const salt = `version-${QRITTER_VERSION}`;
-    return btoa(qrData + salt);
+    const encoder = new TextEncoder();
+    const data = encoder.encode(qrData + salt);
+
+    const hashBuffer = await crypto.subtle.digest('SHA-256', data); // Generate hash
+    return bufferToHex(hashBuffer); // Convert buffer to hex string
 };
 
+
 // Map QR code data to a qritter based on the generated hash
-export const mapQrToQritter = (qrData) => {
-    const hash = generateHash(qrData);
+export const mapQrToQritter = async (qrData) => {
+    const hash = await generateHash(qrData);
 
     // Use the first few characters of the hash for the key (convert to integer)
     const key = parseInt(hash.substring(0, 8), 16) % Object.keys(QRITTERS).length + 1;
@@ -57,9 +69,9 @@ export const mapQrToQritter = (qrData) => {
     const qritter = getQritterByKey(key);
 
     if (qritter) {
-      return qritter;
+        return qritter;
     } else {
-      console.error('No matching qritter found for the QR code.');
-      return null;
+        console.error('No matching qritter found for the QR code.');
+        return null;
     }
 };
