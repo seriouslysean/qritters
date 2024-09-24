@@ -6,7 +6,7 @@ import path from 'path'
 export default defineConfig(({ mode }) => {
   return {
     plugins: [vue()],
-    base: mode === 'production' ? '/qritters/' : '/',
+    base: '/',
     resolve: {
       alias: {
         '@': path.resolve(__dirname, 'src'),
