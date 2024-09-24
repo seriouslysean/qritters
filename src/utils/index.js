@@ -16,15 +16,15 @@ const QRITTER_VERSIONS = {
                 name: 'Mandiblis',
                 type: QRITTER_TYPES.ORDLIN,
                 img: 'mandiblis.png',
-                description: 'Mandiblis, the diligent ant QRitter, exemplifies unmatched resilience and teamwork. Its strong mandibles can carry objects many times its own weight, making it a powerhouse of the QRitter world.'
+                description: 'Mandiblis, the diligent ant QRitter, exemplifies unmatched resilience and teamwork. Its strong mandibles can carry objects many times its own weight, making it a powerhouse of the QRitter world.',
             },
             2: {
                 id: 5,
                 name: 'Tinktin',
                 type: QRITTER_TYPES.GEARLING,
                 img: 'tinktin.png',
-                description: 'Tinktin thrives in the realm of gears and steam, a clockwork ant whose precision and mechanical prowess are unrivaled. This Gearling ant is a true marvel of miniature engineering, turning the cogs of innovation.'
-            }
+                description: 'Tinktin thrives in the realm of gears and steam, a clockwork ant whose precision and mechanical prowess are unrivaled. This Gearling ant is a true marvel of miniature engineering, turning the cogs of innovation.',
+            },
         },
     },
 };
