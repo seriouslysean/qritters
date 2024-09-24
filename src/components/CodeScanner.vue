@@ -1,15 +1,15 @@
 <script setup>
 import { defineEmits, onBeforeUnmount, onMounted, ref } from 'vue';
-
 import QrScanner from 'qr-scanner';
 
-const emit = defineEmits(['scan']);
+const emit = defineEmits(['scan', 'stop']);
 
 const videoRef = ref(null);
 const qrScanner = ref(null);
 
 function stopScanner() {
   qrScanner.value.stop();
+  emit('stop');
 }
 
 function onDecode(result) {
@@ -43,31 +43,113 @@ onBeforeUnmount(() => {
 </script>
 
 <template>
-  <h2>Code Scanner</h2>
-  <video id="video" ref="videoRef"></video>
+  <div class="code-scanner">
+    <div class="reticle">
+      <div class="reticle-top"></div>
+      <div class="reticle-bottom"></div>
+    </div>
+
+    <video ref="videoRef"></video>
+
+    <button @click="stopScanner">Stop</button>
+  </div>
 </template>
 
-<style scoped>
-#video {
-    line-height: 0;
+<style scoped lang="scss">
+.code-scanner {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  line-height: 0;
+  overflow: hidden;
 }
 
-#video {
-    position: relative;
-    width: max-content;
-    height: max-content;
-    overflow: hidden;
+.reticle {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 66.67vw;
+  height: 66.67vw;
+  max-height: 66.67vh;
+  transform: translate(-50%, -50%);
+  box-sizing: border-box;
+  z-index: 10;
+
+  .reticle-top::before,
+  .reticle-top::after,
+  .reticle-bottom::before,
+  .reticle-bottom::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border: 6px solid rgba(255, 255, 0, 0.7);
+  }
+
+  .reticle-top::before {
+    top: 0;
+    left: 0;
+    border-right: none;
+    border-bottom: none;
+  }
+
+  .reticle-top::after {
+    top: 0;
+    right: 0;
+    border-left: none;
+    border-bottom: none;
+  }
+
+  .reticle-bottom::before {
+    bottom: 0;
+    left: 0;
+    border-right: none;
+    border-top: none;
+  }
+
+  .reticle-bottom::after {
+    bottom: 0;
+    right: 0;
+    border-left: none;
+    border-top: none;
+  }
 }
-#video .scan-region-highlight {
-    border-radius: 30px;
-    outline: rgba(0, 0, 0, .25) solid 50vmax;
+
+video {
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
-#video .scan-region-highlight-svg {
-    display: none;
+
+button {
+  position: absolute;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 10px 20px;
+  background-color: rgba(0, 0, 0, 0.7);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  z-index: 10;
+
+  &:hover {
+    background-color: rgba(0, 0, 0, 0.9);
+  }
 }
-#video .code-outline-highlight {
-    stroke: rgba(255, 255, 255, .5) !important;
-    stroke-width: 15 !important;
-    stroke-dasharray: none !important;
+</style>
+
+<style>
+/* qr-scanner overrides */
+.scan-region-highlight,
+.scan-region-highlight-svg,
+.code-outline-highlight {
+  display: none !important;
 }
 </style>

@@ -5,10 +5,12 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "dev:ssl": "VITE_USE_SSL=true vite",
     "build": "vite build",
     "preview": "vite preview",
     "lint": "eslint",
-    "lint:fix": "npm run lint -- --fix"
+    "lint:fix": "npm run lint -- --fix",
+    "tool:generate-ssl": "tools/generate-ssl.sh"
   },
   "dependencies": {
     "qr-scanner": "^1.4.2",
@@ -20,6 +22,7 @@
     "eslint": "^9.11.1",
     "eslint-plugin-vue": "^9.28.0",
     "globals": "^15.9.0",
+    "sass-embedded": "^1.79.3",
     "vite": "^5.4.1"
   },
   "description": "A hidden world of qritters surrounds you, waiting to be discovered. Each code you unlock brings you closer to completing your collection.",

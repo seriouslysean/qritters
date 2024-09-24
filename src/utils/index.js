@@ -1,10 +1,23 @@
+/**
+ * The current version of qritters.
+ * @constant {string}
+ */
 const QRITTER_VERSION = 'OG';
 
+/**
+ * Types of qritters.
+ * @constant {Object}
+ */
 const QRITTER_TYPES = {
-    ORDLIN: { id: 1, name: 'Ordlin' },
-    GEARLING: { id: 2, name: 'Gearling' },
+    ORDLIN: { id: 1, singular: 'Ordlin', plural: 'Ordlins' },
+    GEARLING: { id: 2, singular: 'Gearling', plural: 'Gearlings' },
+    FOODLE: { id: 3, singular: 'Foodle', plural: 'Foodles' },
 };
 
+/**
+ * Versions of qritters.
+ * @constant {Object}
+ */
 const QRITTER_VERSIONS = {
     OG: {
         id: 1,
@@ -12,42 +25,64 @@ const QRITTER_VERSIONS = {
         date: '2024-09-23',
         qritters: {
             1: {
-                id: 4,
+                id: 1,
                 name: 'Mandiblis',
                 type: QRITTER_TYPES.ORDLIN,
                 img: 'mandiblis.png',
-                description: 'Mandiblis, the diligent ant QRitter, exemplifies unmatched resilience and teamwork. Its strong mandibles can carry objects many times its own weight, making it a powerhouse of the QRitter world.',
+                description: `The Mandiblis moves methodically, never seeming to tire. I've seen it carry objects several times its size, with its mandibles gripping tightly as it navigates through the smallest spaces. There's a quiet intensity in its work, always part of something larger, though it rarely draws attention to itself.`,
             },
             2: {
-                id: 5,
+                id: 2,
                 name: 'Tinktin',
                 type: QRITTER_TYPES.GEARLING,
                 img: 'tinktin.png',
-                description: 'Tinktin thrives in the realm of gears and steam, a clockwork ant whose precision and mechanical prowess are unrivaled. This Gearling ant is a true marvel of miniature engineering, turning the cogs of innovation.',
+                description: 'Tinktin clicks and whirs, almost blending into the machinery it inhabits. Its tiny limbs fit perfectly within the intricate gears, as if it was born from the very mechanisms it tends to. If you listen closely, you can hear a faint ticking as it scurries along, always in motion, always precise.',
+            },
+            3: {
+                id: 3,
+                name: 'Wigglin',
+                type: QRITTER_TYPES.FOODLE,
+                img: 'wigglin.png',
+                description: 'Wigglin twists and turns with a playful energy, its gummy body constantly shifting in a swirl of vibrant colors. From deep purples to bright greens, Wigglin never stays the same shade for long. It wiggles through its surroundings with an almost rhythmic motion, leaving a subtle, sweet scent in its wake, as if inviting you to follow along its colorful journey.',
             },
         },
     },
 };
 
-// Utility function to convert a buffer to a hex string
+/**
+ * Utility function to convert a buffer to a hex string.
+ * @param {ArrayBuffer} buffer - The buffer to convert.
+ * @returns {string} The hex string representation of the buffer.
+ */
 const bufferToHex = (buffer) => {
     return Array.from(new Uint8Array(buffer))
         .map(b => b.toString(16).padStart(2, '0'))
         .join('');
 };
 
-// Combine all qritters into a single object
+/**
+ * All qritters combined into a single object.
+ * @constant {Object}
+ */
 export const QRITTERS = Object.values(QRITTER_VERSIONS).reduce((acc, version) => ({
     ...acc,
     ...version.qritters,
 }), {});
 
-// Function to get a qritter by its key (O(1) lookup)
+/**
+ * Function to get a qritter by its key.
+ * @param {number} key - The key of the qritter.
+ * @returns {Object|null} The qritter object or null if not found.
+ */
 export const getQritterByKey = (key) => {
     return QRITTERS[key] || null;
 };
 
-// Generate a hash using SHA-256 and version as a salt
+/**
+ * Generate a hash using SHA-256 and version as a salt.
+ * @param {string} qrData - The QR code data.
+ * @returns {Promise<string>} The generated hash as a hex string.
+ */
 export const generateHash = async (qrData) => {
     const salt = `version-${QRITTER_VERSION}`;
     const encoder = new TextEncoder();
@@ -57,8 +92,11 @@ export const generateHash = async (qrData) => {
     return bufferToHex(hashBuffer); // Convert buffer to hex string
 };
 
-
-// Map QR code data to a qritter based on the generated hash
+/**
+ * Map QR code data to a qritter based on the generated hash.
+ * @param {string} qrData - The QR code data.
+ * @returns {Promise<Object|null>} The mapped qritter object or null if not found.
+ */
 export const mapQrToQritter = async (qrData) => {
     const hash = await generateHash(qrData);
 
