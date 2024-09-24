@@ -9,13 +9,14 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "qr-scanner": "^1.4.2",
     "vue": "^3.4.37"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.1.2",
     "vite": "^5.4.1"
   },
-  "description": "This template should help get you started developing with Vue 3 in Vite. The template uses Vue 3 `<script setup>` SFCs, check out the [script setup docs](https://v3.vuejs.org/api/sfc-script-setup.html#sfc-script-setup) to learn more.",
+  "description": "Find various digital critters within QR codes in the real world",
   "main": "index.html",
   "repository": {
     "type": "git",
