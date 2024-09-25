@@ -1,5 +1,5 @@
 <script setup>
-import { defineEmits, onBeforeUnmount, onMounted, ref } from 'vue';
+import { onBeforeUnmount, onMounted, ref } from 'vue';
 import QrScanner from 'qr-scanner';
 
 const emit = defineEmits(['scan', 'stop']);
