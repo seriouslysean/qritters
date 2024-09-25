@@ -33,11 +33,11 @@ const QRITTER_TYPES = {
         plural: 'Florets',
         description: `Florets emerge from natural environments, embodying elements like plants, fungi, and stones. They inhabit forests, meadows, and gardens, seamlessly blending into the flora while exuding a gentle, earthy presence.`,
     },
-    DEWID: {
+    ENDEW: {
         id: 5,
-        singular: 'Dewid',
-        plural: 'Dewidae',
-        description: `Dewidae are qritters that embody the essence of water, dew, and moisture in all its forms. I've encountered them near mist-covered meadows, foggy shorelines, and early morning dewdrops. A single Dewid can blend into its environment, almost disappearing into the water-laden air.`,
+        singular: 'Endew',
+        plural: 'Endews',
+        description: `Endews are qritters that embody the essence of water, dew, and moisture in all its forms. I've encountered them near mist-covered meadows, foggy shorelines, and early morning dewdrops. A single Dewin can blend into its environment, almost disappearing into the water-laden air.`,
     },
 };
 
