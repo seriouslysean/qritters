@@ -9,10 +9,36 @@ const QRITTER_VERSION = 'OG';
  * @constant {Object}
  */
 const QRITTER_TYPES = {
-    ORDLIN: { id: 1, singular: 'Ordlin', plural: 'Ordlins' },
-    GEARLING: { id: 2, singular: 'Gearling', plural: 'Gearlings' },
-    FOODLE: { id: 3, singular: 'Foodle', plural: 'Foodles' },
-    FLORET: { id: 3, singular: 'Floret', plural: 'Florets' },
+    ORDLIN: {
+        id: 1,
+        singular: 'Ordlin',
+        plural: 'Ordlins',
+        description: `Ordlins are elusive creatures that closely resemble familiar animals and insects, making them easy to overlook. I've noticed they possess subtle behaviors that set them apart, hinting at a hidden depth beneath their ordinary appearances.`,
+    },
+    GEARLING: {
+        id: 2,
+        singular: 'Gearling',
+        plural: 'Gearlings',
+        description: `Gearlings are tiny, mechanical qritters I've discovered within the inner workings of various devices. Their bodies combine organic forms with gears and circuits, and they seem irresistibly drawn to all things technological.`,
+    },
+    FOODLE: {
+        id: 3,
+        singular: 'Foodle',
+        plural: 'Foodles',
+        description: `Foodles are whimsical beings that resemble animated treats and dishes. I've spotted them in places rich with culinary activity, where they add a touch of enchantment to the aromas and flavors around them.`,
+    },
+    FLORET: {
+        id: 4,
+        singular: 'Floret',
+        plural: 'Florets',
+        description: `Florets emerge from natural environments, embodying elements like plants, fungi, and stones. They inhabit forests, meadows, and gardens, seamlessly blending into the flora while exuding a gentle, earthy presence.`,
+    },
+    DEWID: {
+        id: 5,
+        singular: 'Dewid',
+        plural: 'Dewidae',
+        description: `Dewidae are qritters that embody the essence of water, dew, and moisture in all its forms. I've encountered them near mist-covered meadows, foggy shorelines, and early morning dewdrops. A single Dewid can blend into its environment, almost disappearing into the water-laden air.`,
+    },
 };
 
 /**
