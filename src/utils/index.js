@@ -12,6 +12,7 @@ const QRITTER_TYPES = {
     ORDLIN: { id: 1, singular: 'Ordlin', plural: 'Ordlins' },
     GEARLING: { id: 2, singular: 'Gearling', plural: 'Gearlings' },
     FOODLE: { id: 3, singular: 'Foodle', plural: 'Foodles' },
+    FLORET: { id: 3, singular: 'Floret', plural: 'Florets' },
 };
 
 /**
@@ -44,6 +45,13 @@ const QRITTER_VERSIONS = {
                 type: QRITTER_TYPES.FOODLE,
                 img: 'wigglin.png',
                 description: 'Wigglin twists and turns with a playful energy, its gummy body constantly shifting in a swirl of vibrant colors. From deep purples to bright greens, Wigglin never stays the same shade for long. It wiggles through its surroundings with an almost rhythmic motion, leaving a subtle, sweet scent in its wake, as if inviting you to follow along its colorful journey.',
+            },
+            4: {
+                id: 4,
+                name: 'Budlin',
+                type: QRITTER_TYPES.FLORET,
+                img: 'budlin.png',
+                description: 'Budlin walk by wobbling from side to side, as they rustle softly in the gentle breeze. Its sprout-like body, vibrant green at the core, stands in dappled sunlight. Tiny roots skim the surface, absorbing nutrients. With each sway, Budlin releases a subtle, earthy fragrance, reminiscent of rain-soaked foliage.',
             },
         },
     },
