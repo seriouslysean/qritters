@@ -8,6 +8,6 @@ Welcome to **qritters**, the whimsical world where QR codes unlock amazing creat
 
 ## Future Updates
 
-- Add new qritters, types, and families
+- Add new qritters, aspects, and families
 - Improve UX styling and functionality
 - Support for alternate barcode types

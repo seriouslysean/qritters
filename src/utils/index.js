@@ -5,10 +5,10 @@
 const QRITTER_VERSION = 'OG';
 
 /**
- * Types of qritters.
+ * Aspects of qritters.
  * @constant {Object}
  */
-const QRITTER_TYPES = {
+const QRITTER_ASPECTS = {
     ORDLIN: {
         id: 1,
         singular: 'Ordlin',
@@ -53,31 +53,38 @@ const QRITTER_VERSIONS = {
         qritters: {
             1: {
                 id: 1,
-                name: 'Mandiblis',
-                type: QRITTER_TYPES.ORDLIN,
-                img: 'mandiblis.png',
-                description: `The Mandiblis moves methodically, never seeming to tire. I've seen it carry objects several times its size, with its mandibles gripping tightly as it navigates through the smallest spaces. There's a quiet intensity in its work, always part of something larger, though it rarely draws attention to itself.`,
+                name: 'Lug',
+                aspects: [QRITTER_ASPECTS.ORDLIN],
+                img: 'lug.png',
+                description: `The tiny, dark-colored Lug cracked open small seeds with its dull, oversized mandibles, bundling them neatly in leaves. I watched as more and more appeared, each carrying its bundle with surprising ease before vanishing into the cracks, leaving the area bare.`,
             },
             2: {
                 id: 2,
                 name: 'Tinktin',
-                type: QRITTER_TYPES.GEARLING,
+                aspects: [QRITTER_ASPECTS.GEARLING],
                 img: 'tinktin.png',
                 description: 'Tinktin clicks and whirs, almost blending into the machinery it inhabits. Its tiny limbs fit perfectly within the intricate gears, as if it was born from the very mechanisms it tends to. If you listen closely, you can hear a faint ticking as it scurries along, always in motion, always precise.',
             },
             3: {
                 id: 3,
                 name: 'Wigglin',
-                type: QRITTER_TYPES.FOODLE,
+                aspects: [QRITTER_ASPECTS.FOODLE],
                 img: 'wigglin.png',
                 description: 'Wigglin twists and turns with a playful energy, its gummy body constantly shifting in a swirl of vibrant colors. From deep purples to bright greens, Wigglin never stays the same shade for long. It wiggles through its surroundings with an almost rhythmic motion, leaving a subtle, sweet scent in its wake, as if inviting you to follow along its colorful journey.',
             },
             4: {
                 id: 4,
-                name: 'Budlin',
-                type: QRITTER_TYPES.FLORET,
-                img: 'budlin.png',
-                description: 'Budlin walk by wobbling from side to side, as they rustle softly in the gentle breeze. Its sprout-like body, vibrant green at the core, stands in dappled sunlight. Tiny roots skim the surface, absorbing nutrients. With each sway, Budlin releases a subtle, earthy fragrance, reminiscent of rain-soaked foliage.',
+                name: 'Bulbi',
+                aspects: [QRITTER_ASPECTS.FLORET],
+                img: 'bulbi.png',
+                description: 'Bulbi walk by wobbling from side to side, as they rustle softly in the gentle breeze. Its sprout-like body, vibrant green at the core, stands in dappled sunlight. Tiny roots skim the surface, absorbing nutrients. With each sway, Budlin releases a subtle, earthy fragrance, reminiscent of rain-soaked foliage.',
+            },
+            5: {
+                id: 5,
+                name: 'Lep',
+                aspects: [QRITTER_ASPECTS.ENDEW],
+                img: 'lep.png',
+                description: 'Tiny and almost invisible among the roots, the Lep waits. It emerges only when the water is still, its small body barely disturbing the surface. Its wide mouth opens, and the throat pouch swells, catching the water in a delicate net. I watched as it sifted through the water, filtering out the smallest qritters while letting the water drain back out. Then, with a quiet gulp, it vanished, leaving behind only faint ripples as the pouch deflated.',
             },
         },
     },
