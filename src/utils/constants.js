@@ -81,6 +81,13 @@ export const QRITTER_VERSIONS = {
         img: 'drispur.png',
         description: 'Adrift in the calm night, the Drispur shimmered under the moonlight, its body suddenly ballooning with sharp, red scales as a larger shadow approached. It floated silently, the reflected light flickering off its scales like warning beacons before it slowly deflated and blended back into the dark waters.',
       },
+      {
+        id: 6,
+        name: 'Bumblenog',
+        aspects: [QRITTER_ASPECTS.FLORET],
+        img: 'bumblenog.png',
+        description: 'The Bumblenog resembles a fallen log, its body a vibrant mix of autumn colors covered with green moss and various types of fungi. Its earthy, sweet scent, reminiscent of honeysuckle, drew in several curious creatures, but none came out again. As it ambled through the underbrush, it deposited a damp trail that loosened the soil beneath, giving it a freshly turned appearance.',
+      },
     ],
   },
 };
