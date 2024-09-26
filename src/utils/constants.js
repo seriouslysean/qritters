@@ -94,6 +94,13 @@ export const QRITTER_VERSIONS = {
         img: 'bumblenog.png',
         description: 'The Bumblenog resembles a fallen log, its body a vibrant mix of autumn colors covered with green moss and various types of fungi. Its earthy, sweet scent, reminiscent of honeysuckle, drew in several curious creatures, but none came out again. As it ambled through the underbrush, it deposited a damp trail that loosened the soil beneath, giving it a freshly turned appearance.',
       },
+      {
+        id: 7,
+        name: 'Scarmorid',
+        aspects: [QRITTER_ASPECTS.IGNOLITH],
+        img: 'scarmorid.png',
+        description: `Scarmorid's heavy, rock-like plates clink as it moves, hardened by repeated dives into bubbling lava. With each step, its body pulses faintly with heat, glowing through the cracks in its armor. I saw it slip back into the lava, only to emerge moments later, its armor thicker and more jagged.`,
+      },
     ],
   },
 };
