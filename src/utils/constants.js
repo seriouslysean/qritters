@@ -74,6 +74,13 @@ export const QRITTER_VERSIONS = {
         img: 'lep.png',
         description: 'Tiny and almost invisible among the roots, the Lep waits. It emerges only when the water is still, its small body barely disturbing the surface. Its wide mouth opens, and the throat pouch swells, catching the water in a delicate net. I watched as it sifted through the water, filtering out the smallest qritters while letting the water drain back out. Then, with a quiet gulp, it vanished, leaving behind only faint ripples as the pouch deflated.',
       },
+      {
+        id: 6,
+        name: 'Drispur',
+        aspects: [QRITTER_ASPECTS.ENDEW],
+        img: 'drispur.png',
+        description: 'Adrift in the calm night, the Drispur shimmered under the moonlight, its body suddenly ballooning with sharp, red scales as a larger shadow approached. It floated silently, the reflected light flickering off its scales like warning beacons before it slowly deflated and blended back into the dark waters.',
+      },
     ],
   },
 };
