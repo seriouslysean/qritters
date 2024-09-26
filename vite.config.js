@@ -34,6 +34,7 @@ export default defineConfig(() => {
         '~components': path.join(ROOT_DIR, 'components'),
         '~styles': path.join(ROOT_DIR, 'styles'),
         '~utils': path.join(ROOT_DIR, 'utils'),
+        '~views': path.join(ROOT_DIR, 'views'),
       },
     },
     server: {
