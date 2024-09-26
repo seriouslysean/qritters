@@ -1,9 +1,14 @@
 <script setup>
+import { useHead } from 'unhead';
 import { computed } from 'vue';
 
 import { getQritters } from '~utils/qritters';
 
 const qritters = computed(() => getQritters());
+
+useHead({
+  title: 'Qritters Codex',
+});
 </script>
 
 <template>

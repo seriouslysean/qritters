@@ -1,4 +1,5 @@
 <script setup>
+import { useHead } from 'unhead';
 import { computed } from 'vue';
 import { useRoute, RouterLink } from 'vue-router';
 
@@ -13,6 +14,18 @@ const slug = computed(() => route.params.slug);
 
 // Get the qritter by slug
 const qritter = computed(() => getQritterBySlug(slug.value));
+
+// Meta
+const title = computed(() => `${qritter.value?.name || 'Not Found'} - Qritters Codex`);
+const metaTags = computed(() => ([
+  { property: 'og:title', content: title.value },
+  { name: 'twitter:title', content: title.value },
+]));
+
+useHead({
+  title: title.value,
+  meta: metaTags.value,
+});
 </script>
 
 <template>

@@ -14,6 +14,7 @@
   },
   "dependencies": {
     "qr-scanner": "^1.4.2",
+    "unhead": "^1.11.6",
     "vue": "^3.4.37",
     "vue-router": "^4.4.5"
   },

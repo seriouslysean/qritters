@@ -1,10 +1,13 @@
 import { createApp } from 'vue';
-import { createWebHashHistory, createRouter } from 'vue-router'
+import { createWebHashHistory, createRouter } from 'vue-router';
+import { createHead } from 'unhead';
 
 import '~styles/reset.css';
 import '~styles/style.css';
 
 import App from './App.vue';
+
+const head = createHead();
 
 const routes = [
   { path: '/', component: () => import('~views/HomeView.vue') },
@@ -32,7 +35,8 @@ const router = createRouter({
 });
 
 const app = createApp(App)
-  .use(router);
+  .use(router)
+  .use(head);
 
 app.mount('#app');
 
