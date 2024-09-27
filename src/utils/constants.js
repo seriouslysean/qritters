@@ -122,11 +122,31 @@ export const QRITTER_VERSIONS = {
       },
       {
         id: 9,
+        name: 'Chirren',
+        aspects: [QRITTER_ASPECTS.AETHERIS],
+        img: 'chirren.png',
+        description: `Chirren glide effortlessly through the air, their faint chirring sound the only sign of their presence. I watched as they perched briefly on branches before taking off again, using the lightest breeze to carry them onward. Their movements are smooth and precise, conserving energy as they float between perches, a quiet hum of wings accompanying their graceful path.`,
+        draft: true,
+      },
+      {
+        id: 10,
         name: 'Tremodrill',
         aspects: [QRITTER_ASPECTS.SKARN],
         img: 'tremodrill.png',
         description: `I found Tremodrill in an area of constant tremors, drilling deep into the ground as if searching for the perfect point of stability. Once it settled, the ground beneath seemed calmer, while a low, persistent hum filled the air, almost like a distant tuning fork. The vibrations felt subtle, but the eerie sound lingered, giving the whole area a ghostly atmosphere.`,
+        draft: true,
+      },
+      {
+        id: 11,
+        name: 'Chipple',
+        aspects: [QRITTER_ASPECTS.FOODLE],
+        img: 'chipple.png',
+        description: `The Chipple is a single ruffled potato chip, always on the move, propelled by its two thin, pencil-like legs. It seems to delight in running, never pausing for more than a moment before it sprints off again.`,
       },
     ],
   },
 };
+
+export const QRITTERS = Object.values(QRITTER_VERSIONS)
+  .flatMap(version => version.qritters)
+  .filter(qritter => !qritter.draft);

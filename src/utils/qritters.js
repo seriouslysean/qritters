@@ -1,4 +1,4 @@
-import { QRITTER_VERSION, QRITTER_VERSIONS } from '~utils/constants';
+import { QRITTER_VERSION, QRITTERS } from '~utils/constants';
 import { slugify, generateHash } from '~utils/helpers';
 
 /**
@@ -6,7 +6,7 @@ import { slugify, generateHash } from '~utils/helpers';
  * @returns {Object} The combined qritters object.
  */
 export const getQritters = () => {
-  return QRITTER_VERSIONS.OG.qritters.reduce((acc, qritter) => ({
+  return QRITTERS.reduce((acc, qritter) => ({
     ...acc,
     [qritter.id]: {
       ...qritter,
