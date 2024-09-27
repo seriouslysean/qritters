@@ -120,6 +120,13 @@ export const QRITTER_VERSIONS = {
         img: 'bonfi.png',
         description: `Drifting in unison, the Bonfi fed on vines and moss, swelling in size with each bite. As a light rain began, they swiftly shrank and vanished into the cliffside, leaving behind tiny holes scattered across the stone, like constellations etched into the rock.`,
       },
+      {
+        id: 9,
+        name: 'Tremodrill',
+        aspects: [QRITTER_ASPECTS.SKARN],
+        img: 'tremodrill.png',
+        description: `I found Tremodrill in an area of constant tremors, drilling deep into the ground as if searching for the perfect point of stability. Once it settled, the ground beneath seemed calmer, while a low, persistent hum filled the air, almost like a distant tuning fork. The vibrations felt subtle, but the eerie sound lingered, giving the whole area a ghostly atmosphere.`,
+      },
     ],
   },
 };
