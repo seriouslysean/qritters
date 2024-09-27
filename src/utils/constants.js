@@ -28,14 +28,20 @@ export const QRITTER_ASPECTS = {
   ENDEW: {
     id: 5,
     singular: 'Endew',
-    plural: 'Endews',
-    description: `Endews are qritters that embody the essence of water, dew, and moisture in all its forms. I've encountered them near mist-covered meadows, foggy shorelines, and early morning dewdrops. A single Dewin can blend into its environment, almost disappearing into the water-laden air.`,
+    plural: 'Endui',
+    description: `Endui embody the essence of water, dew, and moisture in all its forms. I've encountered them near mist-covered meadows, foggy shorelines, and early morning dewdrops. A single Dewin can blend into its environment, almost disappearing into the water-laden air.`,
   },
   IGNOLITH: {
     id: 6,
     singular: 'Ignolith',
     plural: 'Ignoliths',
     description: `Ignoliths carry the essence of fire, constantly radiating warmth and energy. Their presence is unmistakable, with heat lingering in the air long after they've passed. Whether softly glowing like embers or flaring with sudden intensity, Ignoliths are deeply primal, embodying a raw and unpredictable nature.`,
+  },
+  AETHERIS: {
+    id: 7,
+    singular: 'Aetheris',
+    plural: 'Aetherii',
+    description: `Aetherii often catch my eye as they move through the skies with a quiet grace. Some are familiar, while others shift in ways that feel different, following paths I can't quite understand. Their connection to the air is undeniable, yet still a mystery.`,
   },
 };
 
