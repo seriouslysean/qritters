@@ -43,6 +43,12 @@ export const QRITTER_ASPECTS = {
     plural: 'Aetherii',
     description: `Aetherii often catch my eye as they move through the skies with a quiet grace. Some are familiar, while others shift in ways that feel different, following paths I can't quite understand. Their connection to the air is undeniable, yet still a mystery.`,
   },
+  SKARN: {
+    id: 8,
+    singular: 'Skarn',
+    plural: 'Skarn',
+    description: `Skarn are creatures of earth and stone, their forms often indistinguishable from the terrain around them. I've noticed their slow, deliberate movements mirror the steady, unyielding power of the ground itself, a quiet reminder of the ancient forces beneath our feet.`,
+  },
 };
 
 export const QRITTER_VERSIONS = {
