@@ -30,24 +30,12 @@ const buttonMessage = computed(() => {
   }
   return scannedQritter.value ? 'Scan Again' : 'Start Scanner';
 });
-
-const qritter = computed(() => {
-  if (typeof scannedQritter.value !== 'object') {
-    return null;
-  }
-  return {
-    ...scannedQritter.value,
-    img: `images/qritters/${scannedQritter.value.img}`,
-    // TODO support multiple types
-    aspects: scannedQritter.value.aspects.map(({ singular }) => singular),
-  };
-});
 </script>
 
 <template>
   <CodeScanner @scan="handleScan" @stop="handleStop" v-if="isScanning" />
 
-  <QritterDetails v-if="!isScanning && qritter" :qritter="qritter" />
+  <QritterDetails v-if="!isScanning && scannedQritter" :qritter="scannedQritter" />
 
   <div class="controls">
     <button v-if="!isScanning" @click="toggleScanner">{{ buttonMessage }}</button>
