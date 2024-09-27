@@ -101,6 +101,13 @@ export const QRITTER_VERSIONS = {
         img: 'scarmorid.png',
         description: `Scarmorid's heavy, rock-like plates clink as it moves, hardened by repeated dives into bubbling lava. With each step, its body pulses faintly with heat, glowing through the cracks in its armor. I saw it slip back into the lava, only to emerge moments later, its armor thicker and more jagged.`,
       },
+      {
+        id: 8,
+        name: 'Bonfi',
+        aspects: [QRITTER_ASPECTS.IGNOLITH],
+        img: 'bonfi.png',
+        description: `Drifting in unison, the Bonfi fed on vines and moss, swelling in size with each bite. As a light rain began, they swiftly shrank and vanished into the cliffside, leaving behind tiny holes scattered across the stone, like constellations etched into the rock.`,
+      },
     ],
   },
 };
