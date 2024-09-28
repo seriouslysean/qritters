@@ -143,6 +143,14 @@ export const QRITTER_VERSIONS = {
         img: 'chipple.png',
         description: `The Chipple is a single ruffled potato chip, always on the move, propelled by its two thin, pencil-like legs. It seems to delight in running, never pausing for more than a moment before it sprints off again.`,
       },
+      {
+        id: 12,
+        name: 'Cleftmite',
+        aspects: [QRITTER_ASPECTS.SKARN],
+        img: 'cleftmite.png',
+        description: `The Cleftmite is a small, pebble-like creature that lives in the cracks of Tremodrills. Its spined legs allow it to anchor into the jagged surfaces, making it nearly indistinguishable from the rock around it.`,
+        draft: true,
+      },
     ],
   },
 };
