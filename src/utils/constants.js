@@ -156,7 +156,6 @@ export const QRITTER_VERSIONS = {
         aspects: [QRITTER_ASPECTS.ORDLIN],
         img: 'mucktail.png',
         description: 'I watched as Mucktail darted through its winding burrows, its long tail sweeping the dirt behind it like a well-practiced broom. With its nimble legs and swift movements, it disappeared as quickly as it had come, leaving no trace in its wake.',
-        draft: true,
       },
     ],
   },
