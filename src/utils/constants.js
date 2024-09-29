@@ -150,6 +150,14 @@ export const QRITTER_VERSIONS = {
         img: 'cleftmite.png',
         description: `The pebble-sized Cleftmites blend seamlessly into the rocky surfaces of Tremodrills, their spiny legs anchoring them in place as they quietly clear away moss and debris. It's only when they begin to move that their presence is revealed, tiny but vital caretakers of their colossal hosts.`,
       },
+      {
+        id: 13,
+        name: 'Mucktail',
+        aspects: [QRITTER_ASPECTS.ORDLIN],
+        img: 'mucktail.png',
+        description: 'I watched as Mucktail darted through its winding burrows, its long tail sweeping the dirt behind it like a well-practiced broom. With its nimble legs and swift movements, it disappeared as quickly as it had come, leaving no trace in its wake.',
+        draft: true,
+      },
     ],
   },
 };
