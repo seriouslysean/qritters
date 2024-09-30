@@ -49,6 +49,12 @@ export const QRITTER_ASPECTS = {
     plural: 'Skarn',
     description: `Skarn are creatures of earth and stone, their forms often indistinguishable from the terrain around them. I've noticed their slow, deliberate movements mirror the steady, unyielding power of the ground itself, a quiet reminder of the ancient forces beneath our feet.`,
   },
+  THRYX: {
+    id: 9,
+    singular: 'Thryx',
+    plural: 'Thryx',
+    description: `Thryx are insectoid creatures with a strong sense of unity, operating in swarms or hives. Their exoskeletons click and buzz as they work in perfect synchronization, constructing nests, burrowing, or foraging with a singular focus. Their strength lies in their collective nature, each individual contributing to the whole.`,
+  },
 };
 
 export const QRITTER_VERSIONS = {
@@ -60,7 +66,7 @@ export const QRITTER_VERSIONS = {
       {
         id: 1,
         name: 'Lug',
-        aspects: [QRITTER_ASPECTS.ORDLIN],
+        aspects: [QRITTER_ASPECTS.THRYX],
         img: 'lug.png',
         description: `The tiny, dark-colored Lug cracked open small seeds with its dull, oversized mandibles, bundling them neatly in leaves. I watched as more and more appeared, each carrying its bundle with surprising ease before vanishing into the cracks, leaving the area bare.`,
       },
