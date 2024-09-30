@@ -126,7 +126,6 @@ export const QRITTER_VERSIONS = {
         aspects: [QRITTER_ASPECTS.AETHERIS],
         img: 'chirren.png',
         description: `Chirren glide effortlessly through the air, their faint chirring sound the only sign of their presence. I watched as they perched briefly on branches before taking off again, using the lightest breeze to carry them onward. Their movements are smooth and precise, conserving energy as they float between perches, a quiet hum of wings accompanying their graceful path.`,
-        draft: true,
       },
       {
         id: 10,
