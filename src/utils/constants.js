@@ -55,6 +55,12 @@ export const QRITTER_ASPECTS = {
     plural: 'Thryx',
     description: `Thryx are insectoid creatures with a strong sense of unity, operating in swarms or hives. Their exoskeletons click and buzz as they work in perfect synchronization, constructing nests, burrowing, or foraging with a singular focus. Their strength lies in their collective nature, each individual contributing to the whole.`,
   },
+  THAUMYR: {
+    id: 10,
+    singular: 'Thaumyr',
+    plural: 'Thaumyr',
+    description: `Thaumyr are ordinary objects animated by residual magic. Whether by accident or intent, they now move as if alive. Each carries a faint echo of its original purpose, guided by a lingering enchantment that may have been left unchecked or forgotten altogether.`,
+  },
 };
 
 export const QRITTER_VERSIONS = {
@@ -169,6 +175,13 @@ export const QRITTER_VERSIONS = {
         img: 'scuffin.png',
         description: `The other day, I observed Scuffin pushing through the soil with its broad, shovel-like nose. Its sturdy legs carried it forward, leaving small furrows in the earth as it searched for roots and tubers. The quiet rhythm of its digging was almost soothing to watch.`,
         draft: true,
+      },
+      {
+        id: 15,
+        name: 'Druke',
+        aspects: [QRITTER_ASPECTS.THAUMYR],
+        img: 'druke.png',
+        description: `The Druke floats alone among the reeds, its faded, rubbery form casting an eerie shadow on the water. It mimics other ducks, tipping forward as if to feed, though its hollow beak remains empty. Each time, it bobs back up, blankly staring ahead before trying again, bound by some forgotten instinct.`,
       }
     ]
   }
