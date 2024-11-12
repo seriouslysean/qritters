@@ -1,46 +1,19 @@
 {
   "name": "qritters",
   "private": true,
-  "version": "0.1.1",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "dev:ssl": "VITE_USE_SSL=true vite",
-    "build": "vite build",
-    "preview": "vite preview",
-    "lint": "eslint",
-    "lint:fix": "npm run lint -- --fix",
-    "tool:generate-ssl": "tools/generate-ssl.sh"
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
   },
   "dependencies": {
+    "nuxt": "3.14",
     "qr-scanner": "^1.4.2",
-    "unhead": "^1.11.6",
-    "vue": "^3.4.37",
-    "vue-router": "^4.4.5"
+    "vue": "3.5",
+    "vue-router": "latest"
   },
-  "devDependencies": {
-    "@eslint/js": "^9.11.1",
-    "@vitejs/plugin-vue": "^5.1.2",
-    "eslint": "^9.11.1",
-    "eslint-plugin-vue": "^9.28.0",
-    "globals": "^15.9.0",
-    "sass-embedded": "^1.79.3",
-    "vite": "^5.4.1"
-  },
-  "description": "A hidden world of qritters surrounds you, waiting to be discovered. Each code you unlock brings you closer to completing your collection.",
-  "main": "index.html",
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/seriouslysean/qritters.git"
-  },
-  "keywords": [
-    "qr-codes",
-    "critters"
-  ],
-  "author": "Sean Kennedy <sean@codeserious.com>",
-  "license": "UNLICENSED",
-  "bugs": {
-    "url": "https://github.com/seriouslysean/qritters/issues"
-  },
-  "homepage": "https://github.com/seriouslysean/qritters#readme"
+  "description": "A hidden world of qritters surrounds you, waiting to be discovered. Each code you unlock brings you closer to completing your collection."
 }

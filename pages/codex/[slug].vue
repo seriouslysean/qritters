@@ -3,8 +3,8 @@ import { useHead } from 'unhead';
 import { computed } from 'vue';
 import { useRoute, RouterLink } from 'vue-router';
 
-import { getQritterBySlug } from '~utils/qritters';
-import QritterDetails from '~components/QritterDetails.vue';
+import { getQritterBySlug } from '@/utils/qritters';
+import QritterDetails from '@/components/qritter-details.vue';
 
 // Get the route object
 const route = useRoute();

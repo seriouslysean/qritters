@@ -1,5 +1,5 @@
-import { QRITTER_VERSION, QRITTERS } from '~utils/constants';
-import { slugify, generateHash } from '~utils/helpers';
+import { QRITTER_VERSION, QRITTERS } from '@/utils/constants';
+import { slugify, generateHash } from '@/utils/helpers';
 
 /**
  * Function to get all qritters combined into a single object.

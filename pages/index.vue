@@ -1,10 +1,10 @@
 <script setup>
 import { computed, ref } from 'vue';
 
-import { mapQrToQritter } from '~utils/qritters';
+import { mapQrToQritter } from '@/utils/qritters';
 
-import CodeScanner from '~components/CodeScanner.vue';
-import QritterDetails from '~components/QritterDetails.vue';
+import CodeScanner from '@/components/code-scanner.vue';
+import QritterDetails from '@/components/qritter-details.vue';
 
 const isScanning = ref(false);
 const scannedQritter = ref(false);

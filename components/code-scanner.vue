@@ -55,7 +55,7 @@ onBeforeUnmount(() => {
   </div>
 </template>
 
-<style scoped lang="scss">
+<style scoped>
 .code-scanner {
   position: fixed;
   top: 0;
@@ -76,45 +76,45 @@ onBeforeUnmount(() => {
   transform: translate(-50%, -50%);
   box-sizing: border-box;
   z-index: 10;
+}
 
-  .reticle-top::before,
-  .reticle-top::after,
-  .reticle-bottom::before,
-  .reticle-bottom::after {
-    content: '';
-    position: absolute;
-    width: 20px;
-    height: 20px;
-    border: 6px solid rgba(255, 255, 0, 0.7);
-  }
+.reticle .reticle-top::before,
+.reticle .reticle-top::after,
+.reticle .reticle-bottom::before,
+.reticle .reticle-bottom::after {
+  content: '';
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: 6px solid rgba(255, 255, 0, 0.7);
+}
 
-  .reticle-top::before {
-    top: 0;
-    left: 0;
-    border-right: none;
-    border-bottom: none;
-  }
+.reticle .reticle-top::before {
+  top: 0;
+  left: 0;
+  border-right: none;
+  border-bottom: none;
+}
 
-  .reticle-top::after {
-    top: 0;
-    right: 0;
-    border-left: none;
-    border-bottom: none;
-  }
+.reticle .reticle-top::after {
+  top: 0;
+  right: 0;
+  border-left: none;
+  border-bottom: none;
+}
 
-  .reticle-bottom::before {
-    bottom: 0;
-    left: 0;
-    border-right: none;
-    border-top: none;
-  }
+.reticle .reticle-bottom::before {
+  bottom: 0;
+  left: 0;
+  border-right: none;
+  border-top: none;
+}
 
-  .reticle-bottom::after {
-    bottom: 0;
-    right: 0;
-    border-left: none;
-    border-top: none;
-  }
+.reticle .reticle-bottom::after {
+  bottom: 0;
+  right: 0;
+  border-left: none;
+  border-top: none;
 }
 
 video {
@@ -138,10 +138,10 @@ button {
   border-radius: 5px;
   cursor: pointer;
   z-index: 10;
+}
 
-  &:hover {
-    background-color: rgba(0, 0, 0, 0.9);
-  }
+button:hover {
+  background-color: rgba(0, 0, 0, 0.9);
 }
 </style>
 

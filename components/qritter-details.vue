@@ -14,7 +14,7 @@ const formattedQritter = computed(() => {
   }
   return {
     ...props.qritter,
-    img: `images/qritters/${props.qritter.img}`,
+    img: `/images/qritters/${props.qritter.img}`,
     aspects: props.qritter.aspects.map(({ singular }) => singular),
   };
 });
